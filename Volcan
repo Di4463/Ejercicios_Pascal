@@ -1,0 +1,18 @@
+program Volcan;
+uses crt;
+var
+  i, j, k, n: integer;
+  longitudes: array[1..6] of integer = (2, 4, 8, 16, 32, 64);
+begin
+  clrscr;
+  n := 6;
+  for i := 1 to n do
+  begin
+    for k := 1 to (64 - longitudes[i]) div 2 do
+      write(' ');
+    for j := 1 to longitudes[i] do
+      write('*');
+    writeln;
+  end;
+  readln;
+end.
