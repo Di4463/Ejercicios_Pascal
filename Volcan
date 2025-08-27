@@ -4,16 +4,14 @@ var
   i, j, k, n, longitud: integer;
 begin
   clrscr;
-  n := 6; { número de filas }
+  n := 6;
   for i := 1 to n do
   begin
-    longitud := 1 shl i;  { equivale a 2^i usando desplazamiento de bits }
+    longitud := 1 shl i; 
 
-    { espacios para centrar la línea }
     for k := 1 to (64 - longitud) div 2 do
       write(' ');
 
-    { imprimir los asteriscos }
     for j := 1 to longitud do
       write('*');
 
